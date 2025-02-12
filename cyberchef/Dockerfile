@@ -11,4 +11,4 @@ RUN npm run build
 
 FROM nginx:1.27-alpine3.21
 
-COPY --from=build ./build/prod /usr/share/nginx/html/
+COPY --from=build /src/build/prod /usr/share/nginx/html/
