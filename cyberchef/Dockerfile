@@ -2,7 +2,6 @@
 FROM node:18-alpine AS build
 
 ENV VERSION=v10.19.4
-LABEL org.opencontainers.image.source="https://github.com/airman604/tools"
 
 WORKDIR /src
 RUN apk add --no-cache git
@@ -11,5 +10,5 @@ RUN npm ci
 RUN npm run build
 
 FROM nginx:1.27-alpine3.21
-
+LABEL org.opencontainers.image.source="https://github.com/airman604/tools"
 COPY --from=build /src/build/prod /usr/share/nginx/html/

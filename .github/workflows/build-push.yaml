@@ -23,6 +23,7 @@ jobs:
       matrix:
         image:
           - cyberchef
+          - request-baskets
 
     steps:
       - name: Check out the repo
