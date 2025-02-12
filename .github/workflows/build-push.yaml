@@ -41,6 +41,8 @@ jobs:
         uses: docker/metadata-action@369eb591f429131d6889c46b94e711f089e6ca96 # v5.6.1
         with:
           images: ${{ env.REPOSITORY }}/${{ matrix.image }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/airman604/tools
           tags: |
             type=sha
             type=semver,pattern={{version}}

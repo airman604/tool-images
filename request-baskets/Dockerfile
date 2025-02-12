@@ -18,7 +18,6 @@ RUN GIT_VERSION="$(git describe --dirty='*' || git symbolic-ref -q --short HEAD)
 
 # Stage 2. Packaging into alpine
 FROM alpine:latest
-LABEL org.opencontainers.image.source="https://github.com/airman604/tools"
 RUN apk --no-cache add ca-certificates
 VOLUME /var/lib/rbaskets
 COPY --from=builder /go/src/rbaskets/docker/entrypoint.sh /bin/entrypoint

@@ -10,5 +10,4 @@ RUN npm ci
 RUN npm run build
 
 FROM nginx:1.27-alpine3.21
-LABEL org.opencontainers.image.source="https://github.com/airman604/tools"
 COPY --from=build /src/build/prod /usr/share/nginx/html/
