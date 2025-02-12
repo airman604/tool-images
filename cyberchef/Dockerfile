@@ -4,6 +4,7 @@ FROM node:18-alpine AS build
 ENV VERSION=v10.19.4
 
 WORKDIR /src
+RUN apk add --no-cache git
 RUN git clone --branch ${VERSION} --depth 1 https://github.com/gchq/CyberChef.git .
 RUN npm ci
 RUN npm run build
