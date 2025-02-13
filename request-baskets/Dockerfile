@@ -2,7 +2,7 @@
 
 # Stage 1. Building service
 FROM golang:latest AS builder
-ENV VERSION=v1.2.3
+ARG VERSION=v1.2.3
 
 WORKDIR /go/src/rbaskets
 

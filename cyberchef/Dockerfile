@@ -1,7 +1,6 @@
 # Adapted from official https://github.com/gchq/CyberChef/blob/master/Dockerfile
 FROM node:18-alpine AS build
-
-ENV VERSION=v10.19.4
+ARG VERSION=v10.19.4
 
 WORKDIR /src
 RUN apk add --no-cache git

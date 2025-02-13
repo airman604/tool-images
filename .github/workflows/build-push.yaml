@@ -24,6 +24,7 @@ jobs:
         image:
           - cyberchef
           - request-baskets
+          - excalidraw
 
     steps:
       - name: Check out the repo
