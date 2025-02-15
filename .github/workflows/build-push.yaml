@@ -25,6 +25,7 @@ jobs:
           - cyberchef
           - request-baskets
           - excalidraw
+          - pwpush
 
     steps:
       - name: Check out the repo
