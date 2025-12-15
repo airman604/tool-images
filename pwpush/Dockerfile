@@ -8,7 +8,7 @@ FROM ruby:3.4-alpine AS build-env
 # include global args
 ARG BUNDLE_WITHOUT
 ARG BUNDLE_DEPLOYMENT
-ARG VERSION=v1.51.1
+ARG VERSION=v1.65.2
 
 # Required build packages
 RUN apk add --no-cache \
@@ -97,8 +97,8 @@ WORKDIR ${APP_ROOT}
 ENV RACK_ENV=production RAILS_ENV=production
 
 RUN addgroup -g "${GID}" pwpusher \
-  && adduser -D -u "${UID}" -G pwpusher pwpusher \
-  && chown -R pwpusher:pwpusher ${APP_ROOT}
+    && adduser -D -u "${UID}" -G pwpusher pwpusher \
+    && chown -R pwpusher:pwpusher ${APP_ROOT}
 
 # Set a default secret_key_base
 # For those self-hosting this app, you should
