@@ -26,6 +26,7 @@ jobs:
           - request-baskets
           - excalidraw
           - pwpush
+          - fizzy
 
     steps:
       - name: Check out the repo
