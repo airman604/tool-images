@@ -32,7 +32,7 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libyaml-dev pkg-config git && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
-RUN git clone https://github.com/basecamp/fizzy.git /src && rm -rf /src/.git
+RUN git clone --depth 1 https://github.com/basecamp/fizzy.git /src && rm -rf /src/.git
 
 # Install application gems
 RUN cp -a /src/Gemfile /src/Gemfile.lock /src/vendor ./
