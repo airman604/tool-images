@@ -27,6 +27,7 @@ jobs:
           - excalidraw
           - pwpush
           - fizzy
+          - smee.io
 
     steps:
       - name: Check out the repo
